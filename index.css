@@ -13,6 +13,11 @@ ul {
   list-style: none;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -74,4 +79,30 @@ ul {
 .nav__link.active {
   color: white;
   font-weight: 400;
+}
+
+.header__ticker {
+  margin-top: 230px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ticker__track {
+  display: inline-flex;
+  white-space: nowrap;
+  gap: 60px;
+
+  font-size: 300px;
+  font-weight: bolder;
+
+  animation: tickerLoop 110s linear infinite;
+}
+
+@keyframes tickerLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
